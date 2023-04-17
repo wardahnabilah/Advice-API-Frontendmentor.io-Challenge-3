@@ -5,8 +5,8 @@
     /* Colors */
     --color-primary-gray: hsl(193, 38%, 86%);
     --color-primary-green: hsl(150, 100%, 66%);
+    --color-primary-green-65: hsla(150, 100%, 66%, .65);
     --neutral-grayishblue: hsl(217, 19%, 38%);
-    /* --neutral-white: hsl(0, 0%, 100%); */
     --neutral-white-80: hsl(0, 0%, 80%);
     --neutral-dark-grayishblue: hsl(217, 19%, 24%);
     --neutral-darkblue: hsl(218, 23%, 16%);
@@ -55,23 +55,67 @@ p {
 
 .container {
     width: clamp(21.375rem, 45vw, 33.8125rem);
-    height: clamp(19.625rem, 45vw, 20.75rem);
+    position: relative;
+    margin-top: 7.5rem;
+    margin-inline: auto;
+    padding-top: 2.5rem;
     background-color: var(--neutral-dark-grayishblue);
     border-radius: .625rem; /* 10px */
+    text-align: center;
+}
+
+@media (min-width: 376px) {
+    .container {
+        padding-top: 3rem;
+    }
+
+    .advice-body {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.advice-title, .advice-body {
+    margin-bottom: 2rem;
+}
+
+.advice-body {
+    padding-inline: 2rem;
+}
+
+.divider {
+    margin-inline: auto;
+    padding-bottom: 4.375rem;
 }
 
 .circle {
     width: 4rem;
     height: 4rem;
-    position: relative;
+    position: absolute;
+    left: calc(50% - 2rem);
+    bottom: 0;
+    transform: translateY(50%);
     background-color: var(--color-primary-green);
     border-radius: 50%;
+}
+
+.circle:hover, .circle:active {
+    cursor: pointer;
+    box-shadow: 0 0 2.5rem .3rem var(--color-primary-green-65);
 }
 
 .dice-icon {
     position: absolute;
     top: calc(50% - .75rem);
     left: calc(50% - .75rem);
+}
+
+.attribution {
+    padding: 1rem;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .attribution, .attribution a {
