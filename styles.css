@@ -1,0 +1,27 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap');
+
+:root {
+    /* Colors */
+    --color-primary-gray: hsl(193, 38%, 86%);
+    --color-primary-green: hsl(150, 100%, 66%);
+    --neutral-grayishblue: hsl(217, 19%, 38%);
+    --neutral-dark-grayishblue: hsl(217, 19%, 24%);
+    --neutral-darkblue: hsl(218, 23%, 16%);
+
+    /* Typography */
+    --ff: 'Manrope', sans-serif;
+
+    --fs-28: 1.75rem;
+    --fs-24: 1.5rem;
+    --fs-13: .8125rem;
+    --fs-11: .6875rem;
+
+    --fw-bold: 800; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
