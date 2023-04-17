@@ -6,11 +6,13 @@
     --color-primary-gray: hsl(193, 38%, 86%);
     --color-primary-green: hsl(150, 100%, 66%);
     --neutral-grayishblue: hsl(217, 19%, 38%);
+    /* --neutral-white: hsl(0, 0%, 100%); */
+    --neutral-white-80: hsl(0, 0%, 80%);
     --neutral-dark-grayishblue: hsl(217, 19%, 24%);
     --neutral-darkblue: hsl(218, 23%, 16%);
 
     /* Typography */
-    --ff: 'Manrope', sans-serif;
+    --font-family: 'Manrope', sans-serif;
 
     --fs-28: 1.75rem;
     --fs-24: 1.5rem;
@@ -20,8 +22,62 @@
     --fw-bold: 800; 
 }
 
+/* ====== Reset Styles ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ====== Main Styles ====== */
+body {
+    font-family: var(--font-family);
+    background-color: var(--neutral-darkblue);
+}
+
+h1 {
+    font-size: var(--fs-24);
+    font-weight: var(--fw-bold);
+    color: var(--color-primary-gray);
+}
+
+p {
+    font-size: var(--fs-11);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    color: var(--color-primary-green);
+}
+
+.container {
+    width: clamp(21.375rem, 45vw, 33.8125rem);
+    height: clamp(19.625rem, 45vw, 20.75rem);
+    background-color: var(--neutral-dark-grayishblue);
+    border-radius: .625rem; /* 10px */
+}
+
+.circle {
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    background-color: var(--color-primary-green);
+    border-radius: 50%;
+}
+
+.dice-icon {
+    position: absolute;
+    top: calc(50% - .75rem);
+    left: calc(50% - .75rem);
+}
+
+.attribution, .attribution a {
+    color: var(--neutral-white-80);
+}
+
+.attribution a {
+    font-weight: var(--fw-bold);
 }
